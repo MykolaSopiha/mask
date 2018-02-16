@@ -1,0 +1,96 @@
+/*RESPONSIVE NAVBAR*/
+.nav
+  &__main
+    padding: 0
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+      text-align: center
+    li
+      display: inline-block
+      &:last-child
+        border-right: none
+    .current a
+      color: #e8603c
+    a
+      display: block
+      padding: 0px 11px
+      +segoe
+      font-size: 20px
+      font-weight: bold
+      color: #b9b9b9
+      text-decoration: none
+      text-transform: uppercase
+      line-height: 48px
+      vertical-align: middle
+      transition: 0.25s
+      letter-spacing: 0.04em
+      &:hover
+        color: #e8603c
+        text-decoration: underline
+    +r(720)
+      display: none !important
+
+  &__trigger
+    display: none
+    text-align: center
+    span
+      display: inline-block
+      padding: 0px 30px
+      font-family: "BebasBold", sans-serif
+      font-size: 24px
+      font-weight: bold
+      color: #e8603c
+      text-transform: uppercase
+      line-height: 48px
+      vertical-align: middle
+      cursor: pointer
+      text-transform: uppercase
+      transition: 0.5s
+      &:hover
+        background-color: #e6002d
+    .open
+      margin-top: -2px
+      background-color: #e6002d
+      text-align: center
+      transition: 0.5s
+    +r(720)
+      display: block !important
+
+  &__mobile
+    position: relative
+    display: none
+    z-index: 99
+    ul
+      display: none
+      list-style-type: none
+      position: absolute
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      background-color: #e6002d
+    li
+      display: block
+      padding: 5px 0
+      margin: 0 5px
+      border-bottom: solid 1px #cc0028
+      &:last-child
+        border-bottom: none
+    a
+      display: block
+      padding: 10px 30px
+      color: #fff
+      font-family: "BebasBold", sans-serif
+      font-size: 20px
+      font-weight: bold
+      color: #b9b9b9
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        background-color: #e6002d
+        color: #fff
+    +r(720)
+      display: block !important

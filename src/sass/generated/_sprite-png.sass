@@ -1,0 +1,128 @@
+$icons: (0:0)
+$icons: map-merge($icons,('document': (X: -576px, Y:-211px, W: 200px, H: 200px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('dots': (X: -576px, Y:-421px, W: 179px, H: 21px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('face-1': (X: 0px, Y:0px, W: 278px, H: 278px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('face-2': (X: -288px, Y:0px, W: 278px, H: 278px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('face-3': (X: 0px, Y:-288px, W: 278px, H: 278px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fruit': (X: 0px, Y:-576px, W: 163px, H: 161px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('leaflet': (X: -787px, Y:-334px, W: 109px, H: 151px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('money-box': (X: -787px, Y:0px, W: 139px, H: 163px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ok': (X: -331px, Y:-576px, W: 152px, H: 146px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('operator': (X: -576px, Y:0px, W: 201px, H: 201px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('perfume': (X: -787px, Y:-173px, W: 133px, H: 151px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('shield': (X: -173px, Y:-576px, W: 148px, H: 152px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('truck': (X: -288px, Y:-288px, W: 201px, H: 201px, TW: 926px, TH: 737px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-document
+//  width: 200px
+//  height: 200px
+//  background-image: url('../img/sprite.png')
+//  background-position: -576px -211px
+//
+//.icon-dots
+//  width: 179px
+//  height: 21px
+//  background-image: url('../img/sprite.png')
+//  background-position: -576px -421px
+//
+//.icon-face-1
+//  width: 278px
+//  height: 278px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-face-2
+//  width: 278px
+//  height: 278px
+//  background-image: url('../img/sprite.png')
+//  background-position: -288px 0px
+//
+//.icon-face-3
+//  width: 278px
+//  height: 278px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -288px
+//
+//.icon-fruit
+//  width: 163px
+//  height: 161px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -576px
+//
+//.icon-leaflet
+//  width: 109px
+//  height: 151px
+//  background-image: url('../img/sprite.png')
+//  background-position: -787px -334px
+//
+//.icon-money-box
+//  width: 139px
+//  height: 163px
+//  background-image: url('../img/sprite.png')
+//  background-position: -787px 0px
+//
+//.icon-ok
+//  width: 152px
+//  height: 146px
+//  background-image: url('../img/sprite.png')
+//  background-position: -331px -576px
+//
+//.icon-operator
+//  width: 201px
+//  height: 201px
+//  background-image: url('../img/sprite.png')
+//  background-position: -576px 0px
+//
+//.icon-perfume
+//  width: 133px
+//  height: 151px
+//  background-image: url('../img/sprite.png')
+//  background-position: -787px -173px
+//
+//.icon-shield
+//  width: 148px
+//  height: 152px
+//  background-image: url('../img/sprite.png')
+//  background-position: -173px -576px
+//
+//.icon-truck
+//  width: 201px
+//  height: 201px
+//  background-image: url('../img/sprite.png')
+//  background-position: -288px -288px
+//

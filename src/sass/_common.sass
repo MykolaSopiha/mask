@@ -1,0 +1,96 @@
++font(SegoeUI-Light, SegoeUI-Light)
++font(SegoeUI, SegoeUI)
++font(SegoeUI-Italic, SegoeUI-Italic)
++font(SegoeUI-Bold, SegoeUI-Bold)
+
+=segoel
+  font-family: "SegoeUI-Light", sans-serif
+
+=segoe
+  font-family: "SegoeUI", sans-serif
+
+=segoei
+  font-family: "SegoeUI-Italic", sans-serif
+
+=segoeb
+  font-family: "SegoeUI-Bold", sans-serif
+
+body
+  background: #FFF
+  line-height: 1.4
+  +segoe
+
+.img-responsive
+  max-width: 100%
+
+.h1
+  color: #fff
+  +segoeb
+  font-size: 48px
+
+.h2
+  color: #fff
+  +segoeb
+  font-size: 40px
+  &--gold
+    text-align: center
+    color: #ffd700
+    text-transform: uppercase
+  &--red
+    text-align: center
+    color: #e62f0f
+    text-transform: uppercase
+  &--title
+    display: inline-block
+    padding-right: 15px
+    padding-left: 15px
+    background-color: #000
+    color: #ffd700
+    text-align: center
+    text-transform: uppercase
+
+.text-center
+  text-align: center
+
+.mh-auto
+  margin-right: auto
+  margin-left: auto
+
+.mt-20
+  margin-top: 20px
+
+.mb-20
+  margin-bottom: 20px
+
+//ICONS
+.icon
+  &-leaflet
+    +s(leaflet)
+  &-perfume
+    +s(perfume)
+  &-shield
+    +s(shield)
+  &-money-box
+    +s(money-box)
+  &-fruit
+    +s(fruit)
+  &-ok
+    +s(ok)
+  &-document
+    +s(document)
+    @extend .mh-auto
+  &-operator
+    +s(operator)
+    @extend .mh-auto
+  &-truck
+    +s(truck)
+    @extend .mh-auto
+  &-face-1
+    +s(face-1)
+    @extend .mh-auto
+  &-face-2
+    +s(face-2)
+    @extend .mh-auto
+  &-face-3
+    +s(face-3)
+    @extend .mh-auto

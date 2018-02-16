@@ -1,0 +1,249 @@
+.top-line
+  background-color: #fff
+
+.top-links
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  li
+    padding: 7px
+    transition: 250ms
+    &:hover
+      background-color: #e73212
+      a
+        color: #ffffff
+  a
+    +segoeb
+    color: #e73212
+    font-size: 18px
+    text-decoration: none
+    text-transform: uppercase
+
+.header
+  padding-top: 100px
+  padding-bottom: 100px
+  background-image: url('../img/header-bg.jpg')
+  +cover
+  color: #ffffff
+
+.txt
+  +segoe
+  font-size: 24px
+  color: #ffffff
+  &--big
+    +segoeb
+  &--italic
+    +segoei
+
+.em
+  padding: 10px 18px
+  background-color: rgba(255, 255, 255, .45)
+  +segoeb
+  color: #e62f0f
+  font-size: 52px
+  text-align: center
+
+.conditions
+  margin-top: 20px
+  margin-bottom: 20px
+  @extend .txt, .txt--italic
+  li
+    &:before
+      content: '- '
+
+.price
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-end
+  +segoeb
+  &__old
+    font-size: 56px
+    color: #ffffff
+    text-decoration: line-through
+  &__new
+    padding-right: 20px
+    padding-left: 20px
+    font-size: 72px
+    color: #e72f0f
+
+.btn
+  display: block
+  width: 100%
+  padding: 21px 0
+  background-color: #ffd700
+  +segoeb
+  color: #000
+  font-size: 30px
+  text-transform: uppercase
+  text-decoration: none
+  text-align: center
+  &--inline
+    display: inline-block
+    width: auto
+    padding-right: 20px
+    padding-left: 20px
+
+.info
+  background-image: url('../img/info-bg.jpg')
+  +cover
+
+.effects
+  padding-top: 70px
+  &__header
+    margin-bottom: 50px
+    @extend .row
+    text-transform: uppercase
+  &__list
+    @extend .row
+
+.effect
+  @extend .col-lg-4
+  margin-bottom: 50px
+  text-align: center
+  &__title
+    margin-bottom: 30px
+    color: #ffd700
+    font-size: 30px
+    text-transform: uppercase
+  &__desc
+    color: #fff
+    font-size: 24px
+    +segoei
+
+.features
+  padding-top: 30px
+  text-align: center
+  &__header
+    margin-bottom: 40px
+    text-transform: uppercase
+  &__list
+    @extend .row
+
+.feature
+  padding-top: 30px
+  padding-bottom: 30px
+  @extend .col-md-4, .col-sm-6
+  &__txt
+    @extend .txt, .txt--big
+    color: #fff
+    font-size: 24px
+
+.usage, .purchase, .order
+  padding-top: 60px
+  padding-bottom: 60px
+  @extend .text-center
+  &__header
+    margin-bottom: 60px
+
+.usage
+  &__items
+    @extend .row
+
+.usage-items
+  margin-bottom: 50px
+  @extend .col-lg-4
+  text-align: center
+  &__pic
+    div
+      border-radius: 50%
+      border: 3px solid #ffd700
+  &__title
+    padding-top: 10px
+    padding-bottom: 10px
+    +segoeb
+    color: #ffd700
+    font-size: 30px
+    text-transform: uppercase
+  &__txt
+    +segoei
+    font-size: 30px
+
+.purchase
+  background-image: url('../img/purchase-bg.jpg')
+  +cover
+  &__steps
+    @extend .row
+    margin-bottom: 60px
+
+.step
+  margin-bottom: 50px
+  @extend .col-lg-4
+  &__pic
+    margin-bottom: 30px
+  &__txt
+    +segoe
+    font-size: 24px
+    color: #ffd700
+
+.order
+  background-image: url('../img/order-bg.jpg')
+  +cover
+  overflow: hidden
+
+.form
+  &__field
+    display: block
+    width: 100%
+    padding: 5px
+    margin-bottom: 35px
+    background-color: transparent
+    border: 2px solid #ffd700
+    color: rgb(255, 255, 255)
+    opacity: .53
+    +segoe
+    font-size: 25px
+    text-align: center
+
+.banner
+  &__content
+    position: relative
+    z-index: 2
+    padding-top: 25px
+    padding-bottom: 25px
+    background-color: rgba(0, 0, 0, .75)
+    box-shadow: 0 4px 9px #000
+  &__pic
+    position: absolute
+    top: 50%
+    right: 0
+    z-index: 1
+    transform: translateX(60%) translateY(-50%)
+    
+.footer
+  background-color: #fff
+  color: #202020
+  +segoel
+
+.service-links
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding-top: 15px
+  padding-bottom: 15px
+  li
+    padding: 15px
+  a
+    color: #202020
+    font-size: 18px
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  +r(600)
+    flex-direction: column
+    align-items: center
+
+.disclaimer
+  color: #1f1f1f
+  h6
+    +segoe
+    font-size: 20px
+    text-transform: uppercase
+  p
+    margin-bottom: 20px
+    +segoel
+    font-size: 20px
+
+.copyright
+  padding-top: 10px
+  padding-bottom: 30px
+  text-align: center
